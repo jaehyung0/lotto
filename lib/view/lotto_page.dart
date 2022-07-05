@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lotto/controller/lotto_controller.dart';
-import 'package:lotto/model/lotto.dart';
 
 class LottoPage extends StatelessWidget {
   LottoPage({Key? key}) : super(key: key);
@@ -125,6 +124,16 @@ class LottoPage extends StatelessWidget {
                       )
                     ],
                   ),
+                ),
+                SizedBox(height: 20,),
+                Text(
+                    '숫자와 ,만 사용해주세요.(1~45 입력하면 더 좋고)',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold
+                  ),
+                  textAlign: TextAlign.center,
                 )
               ],
             );
