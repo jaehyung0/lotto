@@ -33,7 +33,6 @@ class LottoController extends GetxController {
   }
 
   String validator(String value){
-    print('gg');
     if(value.contains('.')){
       return '0,0,0,0,0,0';
     }else{
@@ -53,7 +52,12 @@ class LottoController extends GetxController {
         lottoItems.clear();
         list = selectedNum!.split(',');
         for(int i=0; i<list.length; i++){
-          lottoItems.add(int.parse(list[i]));
+          int cnum = int.parse(list[i]);
+          if(cnum>45){
+            cnum = cnum%45;
+
+          }
+          lottoItems.add(cnum);
         }
         while(lottoItems.length!=6){
           int num = Random().nextInt(45)+1;

@@ -115,7 +115,7 @@ class LottoPage extends StatelessWidget {
                               key: ValueKey(1),
                               keyboardType: TextInputType.number,
                               validator: (value){
-                                return lottoController.validator(value!);
+                                lottoController.validator(value!);
                               },
                               onSaved: (value){
                                 lottoController.selectedNum = value;
@@ -124,7 +124,7 @@ class LottoPage extends StatelessWidget {
                           ),
                           SizedBox(width:20),
                           ElevatedButton(
-                              onPressed: (){
+                              onPressed: () async{
                                 lottoController.trySubmit();
                               },
                               child: Text('선택')
