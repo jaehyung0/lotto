@@ -33,8 +33,9 @@ class LottoController extends GetxController {
   }
 
   String validator(String value){
-    if(value.contains('.')||value.contains(',')){
-      return '';
+    print('gg');
+    if(value.contains('.')){
+      return '0,0,0,0,0,0';
     }else{
       return value;
     }
